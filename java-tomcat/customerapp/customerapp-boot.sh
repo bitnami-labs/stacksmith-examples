@@ -16,7 +16,7 @@ echo "OK"
 # Only perform the setup once
 if [ ! -f "${FIRSTBOOT_STAMP}" ] ; then
     # Jump to the webapp directory
-    basedir=$(find /var/lib/tomcat/webapps/ -mindepth 1 -maxdepth 1 -type d | head -n 1)
+    basedir=$(find /var/lib/tomcat/webapps/ -mindepth 1 -maxdepth 1 -not -name 'ROOT' -type d | head -n 1)
     cd "${basedir}"
 
     # Configure database settings
