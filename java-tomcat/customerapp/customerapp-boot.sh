@@ -10,8 +10,6 @@ while ! mysqladmin ping -h"$DATABASE_HOST" -P"$DATABASE_PORT" -u"$DATABASE_USER"
     sleep 2
 done
 echo "Database available, continuing with application configuration and deploy"
-set
-echo "OK"
 
 # Only perform the setup once
 if [ ! -f "${FIRSTBOOT_STAMP}" ] ; then
@@ -20,10 +18,10 @@ if [ ! -f "${FIRSTBOOT_STAMP}" ] ; then
     cd "${basedir}"
 
     # Configure database settings
+    touch "$CONF" && chmod 600 "$CONF" && chown tomcat:tomcat "$CONF"
     echo "spring.datasource.url: jdbc:mysql://$DATABASE_HOST:$DATABASE_PORT/$DATABASE_NAME?useSSL=true" >> "$CONF"
     echo "spring.datasource.username: $DATABASE_USER" >> "$CONF"
     echo "spring.datasource.password: $DATABASE_PASSWORD" >> "$CONF"
-    cat "$CONF"
 
     touch "${FIRSTBOOT_STAMP}"
 fi
