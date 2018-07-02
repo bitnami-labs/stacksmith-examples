@@ -7,7 +7,7 @@ This is an example to show how to deploy an application using the `.Net Core App
 1. Go to [stacksmith.bitnami.com](https://stacksmith.bitnami.com)
 2. Create a new application and select the _.Net Core Application with DB (MySQL)_ stack template.
 3. Select the targets you are interested on (AWS, Kubernetes,...)
-4. Upload the [_simple-asp-net-core-2-todo-app.zip_](../../../releases/download/v1/simple-asp-net-core-2-todo-app.zip) file (which can be found in [releases](../../../releases) for the project.
+4. Upload the [_simple-asp-net-core-2-todo-app.zip_](../../../../releases/download/v1/simple-asp-net-core-2-todo-app.zip) file (which can be found in [releases](../../../../releases) for the project.
 5. Upload the [_boot.sh_](scripts/boot.sh) script from the [_scripts/_](scripts/) folder.
 6. Click the <kbd>Create</kbd> button.
 7. Launch it in [AWS](https://stacksmith.bitnami.com/support/quickstart-aws) or download the helm chart to run it in [Kubernetes](https://stacksmith.bitnami.com/support/quickstart-k8s)
