@@ -1,11 +1,11 @@
-# .Net Core Application with DB (MySQL): Simple asp net core todo app
+# .NET Core Application with DB (MySQL): Simple asp net core todo app
 
-This is an example to show how to deploy an application using the `.Net Core Application with DB (MySQL)` stack template in [Bitnami Stacksmith](stacksmith.bitnami.com).
+This is an example to show how to deploy an application using the `.NET Core Application with DB (MySQL)` stack template in [Bitnami Stacksmith](stacksmith.bitnami.com).
 
 ## Package and deploy with Stacksmith
 
 1. Go to [stacksmith.bitnami.com](https://stacksmith.bitnami.com)
-2. Create a new application and select the _.Net Core Application with DB (MySQL)_ stack template.
+2. Create a new application and select the _.NET Core Application with DB (MySQL)_ stack template.
 3. Select the targets you are interested on (AWS, Kubernetes,...)
 4. Upload the [_simple-asp-net-core-2-todo-app.zip_](../../../../releases/download/v1/simple-asp-net-core-2-todo-app.zip) file (which can be found in [releases](../../../../releases) for the project.
 5. Upload the [_boot.sh_](scripts/boot.sh) script from the [_scripts/_](scripts/) folder.
