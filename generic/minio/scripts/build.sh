@@ -2,6 +2,7 @@
 
 # Update all the packages in the system.
 yum -y update
+yum install -y sudo
 yum clean all
 
 # Install Caddy Server using the Personal license
