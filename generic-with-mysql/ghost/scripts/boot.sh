@@ -40,7 +40,13 @@ cat >"$CONF_FILE" <<EOF
 EOF
 chown "$NON_ROOT_USER":"$NON_ROOT_USER" "$CONF_FILE"
 
-# Init database    
+# Wait for database to start then...
+while ! mysqladmin ping -h"$DATABASE_HOST" -P"$DATABASE_PORT" -u"$DATABASE_USER" -p"$DATABASE_PASSWORD" --silent; do
+    echo "Waiting for database to become available"
+    sleep 2
+done
+echo "Database available, continuing with application configuration and deploy"
+
 cd "$APP_DIR"
 echo "=> Initializing database..."
 sudo -H -u "$NON_ROOT_USER" NODE_ENV=production ./node_modules/.bin/knex-migrator init

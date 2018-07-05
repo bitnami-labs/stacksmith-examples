@@ -10,6 +10,13 @@ export JAVA_HOME="/usr/lib/jvm/jre"
 readonly BUILDOMATIC_DIR="$(cd ${UPLOADS_DIR}/**/buildomatic; pwd)"
 readonly CONF="${BUILDOMATIC_DIR}/default_master.properties"
 
+# Wait for database to start then...
+while ! /usr/pgsql-9.6/bin/pg_isready -h "$DATABASE_HOST" -U "$DATABASE_USER" -p "$DATABASE_PORT" -d "$DATABASE_NAME" --quiet; do
+    echo "Waiting for database to become available"
+    sleep 2
+done
+echo "Database available, continuing with application configuration and deploy"
+
 # Check if the script has been executed before
 readonly SCRIPT_PATH=$(cd "$(dirname $0)" && pwd)
 readonly EXECUTED_ONCE_STAMP="${SCRIPT_PATH}/.boot-completed-once"
