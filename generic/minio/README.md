@@ -34,7 +34,7 @@ In the next page you will need to fulfill some values:
 
 ![Network Config](./img/network-conf.png)
 
-You will need to give the Stack a name and then in the _Network Configuration_ section we need to set the SSH key name to ours key pair, set the SSH and the Application source to `0.0.0.0/0` so it allows connections from anywhere and set the application port to 9000.
+You will need to give the Stack a name and then in the _Network Configuration_ section we need to set the SSH key name to ours key pair, set the SSH and the Application source to `0.0.0.0/0` so it allows connections from anywhere and set the application port to 8080.
 
 Then create the stack, after a few minutes you should be able to see your machine running:
 
@@ -58,12 +58,12 @@ $ systemctl status stacksmith-run
            └─1831 /opt/stacksmith/user-uploads/minio server /data
 
 Feb 07 12:36:25 ip-10-0-9-254.ec2.internal run.sh[1806]: Browser Access:
-Feb 07 12:36:25 ip-10-0-9-254.ec2.internal run.sh[1806]: http://10.0.9.254:9000  http://127.0.0.1:9000
+Feb 07 12:36:25 ip-10-0-9-254.ec2.internal run.sh[1806]: http://10.0.9.254:8080  http://127.0.0.1:8080
 Feb 07 12:36:25 ip-10-0-9-254.ec2.internal run.sh[1806]: Command-line Access: https://docs.minio.io/docs/minio-client-quickstart-guide
-Feb 07 12:36:25 ip-10-0-9-254.ec2.internal run.sh[1806]: $ mc config host add myminio http://10.0.9.254:9000 3DW67WARTFMT0HI0189N piSAf/LFCoRiKRp3M5a3xrgbsTKCVKOfeVGKnMf3
+Feb 07 12:36:25 ip-10-0-9-254.ec2.internal run.sh[1806]: $ mc config host add myminio http://10.0.9.254:8080 3DW67WARTFMT0HI0189N piSAf/LFCoRiKRp3M5a3xrgbsTKCVKOfeVGKnMf3
 ```
 
-Now you can login into the application using the IP of your machine, the port 9000 and the credentials shown in that log (in the `mc config` command, using the last argument as Secret Key and the previous one as Access Key):
+Now you can login into the application using the IP of your machine, the port 8080 and the credentials shown in that log (in the `mc config` command, using the last argument as Secret Key and the previous one as Access Key):
 
 ![Minio Login](./img/minio-login.png)
 
@@ -92,7 +92,7 @@ service:
 + type: NodePort
   externalPort: 80
 - internalPort: 8080
-+ internalPort: 9000
++ internalPort: 8080
 ```
 
 If you are following this guide with Minikube `NodePort` will expose a port that will be reachable using the Minikube IP. In case you are deploying the chart with a Cloud Provider you can set the `type` to `LoadBalancer` and it will provide you with a public IP to access the application.
@@ -144,7 +144,7 @@ Created minio configuration file successfully at /root/.minio
 
 Drive Capacity: 9.2 GiB Free, 15 GiB Total
 
-Endpoint:  http://172.17.0.21:9000  http://127.0.0.1:9000
+Endpoint:  http://172.17.0.21:8080  http://127.0.0.1:8080
 AccessKey: T7BF8I00JLDQP3KVXHGM
 SecretKey: 4+e5vvD2KwpFIbbzccyyYvlgYZ9uanAJXoay96W1
 ```
