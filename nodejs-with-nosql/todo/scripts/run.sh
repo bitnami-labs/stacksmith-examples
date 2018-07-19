@@ -3,6 +3,9 @@
 # Catch errors and undefined variables
 set -euo pipefail
 
+# Load DATABASE_ env variables
+export $(stacksmith_get_db_parameters_env | xargs)
+
 # The directory where the app is installed
 readonly installdir=/opt/app
 # The user that should run the app
