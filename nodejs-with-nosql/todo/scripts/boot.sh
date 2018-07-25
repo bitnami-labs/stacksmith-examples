@@ -21,6 +21,7 @@ sed -i -e "s/process.env.DATABASE_PASSWORD/\"${DATABASE_PASSWORD}\"/" "${databas
 sed -i -e "s/process.env.DATABASE_CONNECTION_OPTIONS/\"${DATABASE_CONNECTION_OPTIONS:-}\"/" "${database_conf_file}"
 
 # Wait for the database to be available
+# NOTE: this should be handled by the template's boot script instead (T27220)
 while ! mongo "mongodb://$DATABASE_USER:$DATABASE_PASSWORD@$DATABASE_HOST:$DATABASE_PORT/$DATABASE_NAME?${DATABASE_CONNECTION_OPTIONS:-}" --eval '{ping: 1}' --quiet;
 do
     echo "Waiting for database to become available"
