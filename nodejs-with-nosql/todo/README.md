@@ -1,6 +1,6 @@
 # MEAN ToDo Application
 
-This is a simple ToDo application to show how to deploy a MEAN application using [Bitnami Stacksmith](stacksmith.bitnami.com)
+This is a simple ToDo application to show how to deploy a MEAN application using [Bitnami Stacksmith](https://stacksmith.bitnami.com)
 
 ## Package and deploy with Stacksmith
 
