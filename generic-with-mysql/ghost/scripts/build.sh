@@ -11,7 +11,7 @@ wget https://dl.yarnpkg.com/rpm/yarn.repo -O /etc/yum.repos.d/yarn.repo
 yum install -y yarn
 
 # Get Ghost
-wget https://ghost.org/zip/ghost-latest.zip -O /tmp/ghost.zip
+wget https://github.com/TryGhost/Ghost/releases/download/2.0.1/Ghost-2.0.1.zip -O /tmp/ghost.zip
 mkdir -p "$(dirname $APP_DIR)"
 unzip /tmp/ghost.zip -d "$APP_DIR"
 rm /tmp/ghost.zip
