@@ -21,7 +21,7 @@ You can also download [`app.blue.tar.gz` from the releases page](https://github.
 6. Click the <kbd>Create</kbd> button.
 7. Wait for app to be built and deploy it in your favorite target platform.
 
-## Update the application with Stacksmith
+### Update the application with Stacksmith
 
 1. Change something on the app. As an example you can apply the patch `change_color.patch` that changes the color of the task counter:
 
@@ -37,6 +37,44 @@ You can also download [`app.orange.tar.gz` from the releases page](https://githu
 3. Click on <kbd>Edit configuration</kbd>, delete `app.blue.tar.gz` and upload `app.orange.tar.gz`
 4. Click <kbd>Update</kbd>.
 5. Wait for the new version to be built and re-deploy it in your favorite target platform.
+
+## Use the Stacksmith CLI for automating the process
+
+1. Go to [stacksmith.bitnami.com](https://stacksmith.bitnami.com), create a new application and select the `Node.js with NoSQL DB (MongoDB)` stack template.
+2. Install [Stacksmith CLI](https://github.com/bitnami/stacksmith-cli) and authenticate with Stacksmith.
+3. Compress the _app/_ folder from this repo:
+
+   ```bash
+   git clone https://github.com/bitnami-labs/stacksmith-examples
+   cd stacksmith-examples/nodejs-with-nosql/todo
+   tar czf app.blue.tar.gz app
+   ```
+4. Edit the `Stackerfile.yml` and update the `appId` with the URL of your project.
+5. Run the build for a specific target like `aws` or `docker`. E.g.
+
+   ```bash
+   stacksmith build --target docker
+   ```
+6. Wait for app to be built and deploy it in your favorite target platform.
+
+### Update the application via CLI
+
+1. Change the app and build a new tarball. You can use the previous example:
+
+   ```bash
+   cd stacksmith-examples/nodejs-with-nosql/todo
+   git apply ./change_color.patch
+   tar czf app.orange.tar.gz app
+   ```
+
+2. Update the version and the tarball name in the `Stackerfile.yml`.
+3. Run the build for a specific target like `aws` or `docker`. E.g.
+
+   ```bash
+   stacksmith build --target docker
+   ```
+
+4. Wait for the new version to be built and re-deploy it in your favorite target platform.
 
 ## Scripts
 
