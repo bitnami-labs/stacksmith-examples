@@ -28,5 +28,8 @@ msbuild.log
 msbuild.err
 msbuild.wrn
 
+# Build with docker output
+simple-asp-net-core-2-todo-app.zip
+
 # Visual Studio 2015
 .vs/
