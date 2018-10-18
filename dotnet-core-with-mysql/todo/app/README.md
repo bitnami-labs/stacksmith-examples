@@ -7,17 +7,17 @@ The fork adds support for MySQL as the database for storing user information and
 To build from command line, simply build and create publish directory using the `Release` configuration - such as:
 
 ```
-$ dotnet publish -c Release
+$ dotnet publish -c Release -r linux-x64 --self-contained=false
 ```
 
 The above command works on Windows with Visual Studio and .NET Core development features installed as well as on any system with .NET Core installed.
 
-This will create a folder called `bin/Release/netcoreapp2.0/publish` that contains the application directory structure along with all the dependencies required to run it by .NET Core runtime.
+This will create a folder called `bin/Release/netcoreapp2.0/linux-x64/publish` that contains the application directory structure along with all the dependencies required to run it by .NET Core runtime.
 
 Then package the contents of the output directory - either using a GUI tool like 7-zip or on a Linux/macOS system, using the `zip` command - for example:
 
 ```
-$ cd bin/Release/netcoreapp2.0/publish && zip -r -9 ../application.zip .
+$ cd bin/Release/netcoreapp2.0/linux-x64/publish && zip -r -9 ../application.zip .
 ```
 
 # Configuring and initializing database
