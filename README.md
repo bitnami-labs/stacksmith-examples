@@ -13,10 +13,10 @@ The following examples can be found in external repositories:
 
 * [WordPress, a PHP/MySQL application](https://github.com/bitnami-labs/stacksmith-wordpress)
 * [Drupal, a PHP/MySQL application](https://github.com/bitnami-labs/stacksmith-drupal)
-* [Jenkins, a Java/Tomcat application without database](https://github.com/bitnami-labs/stacksmith-jenkins)
-* [Ghost, a Node.js/MySQL application](https://github.com/bitnami-labs/stacksmith-ghost) (previously located at [generic-with-mysql/ghost](generic-with-mysql/ghost/))
-* [A Node.js/MongoDB To-Do example application](https://github.com/bitnami-labs/stacksmith-nodejs-with-nosql) (previously located at [nodejs-with-nosql/todo](nodejs-with-nosql/todo/))
-* [A .NET Core/MySQL To-Do example application](https://github.com/bitnami-labs/stacksmith-dotnet-with-mysql) (previously located at [dotnet-core-with-mysql/todo](dotnet-core-with-mysql/todo/))
+* [Jenkins, a Java/Tomcat application without a database](https://github.com/bitnami-labs/stacksmith-jenkins)
+* [Ghost, a Node.js/MySQL application](https://github.com/bitnami-labs/stacksmith-ghost)
+* [A generic Node.js/MongoDB example application](https://github.com/bitnami-labs/stacksmith-nodejs-with-nosql)
+* [A generic .NET Core/MySQL example application](https://github.com/bitnami-labs/stacksmith-dotnet-with-mysql)
 
 [Learn more about automated application packaging with Stacksmith](https://bitnami.com/application-packaging).
 

@@ -1,4 +1,4 @@
-# .NET Core Application with DB (MySQL): Simple asp net core todo app (deprecated)
+# .NET Core Application with DB (MySQL): Simple asp net core to-do application (deprecated)
 
 ## Deprecation notice
 
