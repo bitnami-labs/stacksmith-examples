@@ -1,4 +1,10 @@
-# Generic application with DB (MySQL): Ghost
+# Generic application with DB (MySQL): Ghost (deprecated)
+
+## Deprecation notice
+
+This example has been deprecated, newer versions can be found at [bitnami-labs/stacksmith-ghost](https://github.com/bitnami-labs/stacksmith-ghost).
+
+## Description
 
 This is an example to show how to deploy an application using the `Generic application with DB (MySQL)` stack template in [Bitnami Stacksmith](stacksmith.bitnami.com).
 

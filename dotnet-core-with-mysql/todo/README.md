@@ -1,4 +1,10 @@
-# .NET Core Application with DB (MySQL): Simple asp net core todo app
+# .NET Core Application with DB (MySQL): Simple asp net core todo app (deprecated)
+
+## Deprecation notice
+
+This example has been deprecated, newer versions can be found at [bitnami-labs/stacksmith-dotnet-with-mysql](https://github.com/bitnami-labs/stacksmith-dotnet-with-mysql).
+
+## Description
 
 This is an example to show how to deploy an application using the `.NET Core Application with DB (MySQL)` stack template in [Bitnami Stacksmith](stacksmith.bitnami.com).
 

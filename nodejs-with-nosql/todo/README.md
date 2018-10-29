@@ -1,4 +1,10 @@
-# MEAN ToDo Application
+# MEAN ToDo Application (deprecated)
+
+## Deprecation notice
+
+This example has been deprecated, newer versions can be found at [bitnami-labs/stacksmith-nodejs-with-nosql](https://github.com/bitnami-labs/stacksmith-nodejs-with-nosql).
+
+## Description
 
 This is a simple ToDo application to show how to deploy a MEAN application using [Bitnami Stacksmith](https://stacksmith.bitnami.com)
 
